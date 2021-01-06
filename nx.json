@@ -1,0 +1,40 @@
+{
+  "npmScope": "workkit",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "ODBjNzk2ZGMtYjQ3YS00MTc3LWIwZjUtYmU3MGM0OWVmOGQwfHJlYWQtd3JpdGU=",
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "workkit-fe": {
+      "tags": []
+    },
+    "workkit-fe-e2e": {
+      "tags": [],
+      "implicitDependencies": ["workkit-fe"]
+    },
+    "workkit-be": {
+      "tags": []
+    }
+  }
+}
