@@ -1,0 +1,29 @@
+name: Nx Affected CI
+on:
+    pull_request:
+        branches: [master]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [12.x]
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - run: git fetch origin master
+            - run: npm install
+            - name: Run Affected Lint
+              shell: bash
+              run: npm run affected:lint -- --base=remotes/origin/master
+            - name: Run Affected Tests
+              shell: bash
+              run: npm run affected:test -- --base=remotes/origin/master
+            - name: Run Affected e2e
+              shell: bash
+              run: npm run affected:e2e -- --base=remotes/origin/master
