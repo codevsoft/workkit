@@ -24,9 +24,7 @@
         "workspace-generator": "nx workspace-generator",
         "dep-graph": "nx dep-graph",
         "help": "nx help",
-        "postinstall": "husky install",
-        "prepublishOnly": "pinst --disable",
-        "postpublish": "pinst --enable"
+        "postinstall": "husky install"
     },
     "private": true,
     "dependencies": {
@@ -84,11 +82,5 @@
         "ts-node": "~9.1.1",
         "tslint": "~6.1.0",
         "typescript": "~4.0.3"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npx nx affected:lint",
-            "pre-push": "npx nx affected:test && npx nx affected:e2e"
-        }
     }
 }
