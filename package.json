@@ -30,6 +30,7 @@
     "dependencies": {
         "@emotion/react": "11.0.0",
         "@emotion/styled": "11.0.0",
+        "@material-ui/core": "^4.11.2",
         "axios": "^0.21.1",
         "core-js": "^3.6.5",
         "document-register-element": "1.13.1",
