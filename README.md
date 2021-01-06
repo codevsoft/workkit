@@ -1,5 +1,5 @@
 <h1 align="center">Welcome to Workkit 👋</h1>
-<img alt="CodevSoft" style="width: 100%" src="https://github.com/codevsoft/workkit/blob/master/apps/workkit-fe/src/assets/codevsoft.jpg" />
+<img alt="codevsoft" style="width: 100%" src="https://github.com/codevsoft/workkit/blob/master/apps/workkit-fe/src/assets/codevsoft.jpg" />
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="documentacion-url.com" target="_blank">
@@ -37,9 +37,9 @@ npx nx affected:test
 
 ## Author
 
-👤 **CodevSoft**
+👤 **codevsoft**
 
-- Github: [@CodevSoft](https://github.com/CodevSoft)
+- Github: [@codevsoft](https://github.com/codevsoft)
 
 ## 🤝 Contributing
 
@@ -51,7 +51,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2021 [CodevSoft](https://github.com/CodevSoft).<br />
+Copyright © 2021 [codevsoft](https://github.com/codevsoft).<br />
 This project is [MPL--2.0 License](https://github.com/codevsoft/workkit/blob/master/LICENSE) licensed.
 
 ---
