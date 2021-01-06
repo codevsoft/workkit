@@ -1,7 +1,3 @@
 module.exports = {
-  projects: [
-    '<rootDir>/apps/workkit-fe',
-    '<rootDir>/apps/api',
-    '<rootDir>/apps/workkit-be',
-  ],
+    projects: ["<rootDir>/apps/workkit-fe", "<rootDir>/apps/workkit-be"],
 };
