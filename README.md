@@ -1,5 +1,5 @@
 <h1 align="center">Welcome to Workkit 👋</h1>
-<img alt="codevsoft" style="width: 100%" src="https://github.com/codevsoft/workkit/blob/master/apps/workkit-fe/src/assets/workit.svg" />
+<img alt="codevsoft" style="width: 100%" src="https://github.com/codevsoft/workkit/blob/master/apps/workkit-fe/src/assets/workkit.svg" />
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="documentacion-url.com" target="_blank">
