@@ -168,6 +168,31 @@
           }
         }
       }
+    },
+    "page-login": {
+      "root": "libs/page-login",
+      "sourceRoot": "libs/page-login/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/page-login/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/page-login"
+          ],
+          "options": {
+            "jestConfig": "libs/page-login/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
