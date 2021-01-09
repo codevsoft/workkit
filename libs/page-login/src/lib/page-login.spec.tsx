@@ -1,13 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 
-import App from './app';
+import { PageLogin } from './page-login';
 
-describe('App', () => {
+describe('PageLogin', () => {
 	it('should render successfully', () => {
-		const { baseElement } = render(<App />);
-
+		const { baseElement } = render(<PageLogin />);
 		expect(baseElement).toBeTruthy();
 	});
 });

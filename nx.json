@@ -35,6 +35,9 @@
     },
     "workkit-be": {
       "tags": []
+    },
+    "page-login": {
+      "tags": []
     }
   }
 }
