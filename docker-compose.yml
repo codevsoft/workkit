@@ -1,0 +1,25 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    entrypoint: ["npx", "nx", "serve", "--host=0.0.0.0", "workkit-fe"]
+    ports:
+      - "4200:4200"
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    entrypoint: ["npx", "nx", "serve", "--host=0.0.0.0", "workkit-be"]
