@@ -6,8 +6,10 @@ import i18n from './i18n';
 import App from './app/app';
 
 ReactDOM.render(
-  <I18nextProvider i18n={i18n}>
-    <App />
-  </I18nextProvider>,
+  <React.StrictMode>
+    <I18nextProvider i18n={i18n}>
+      <App />
+    </I18nextProvider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
