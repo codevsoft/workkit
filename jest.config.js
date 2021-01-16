@@ -3,5 +3,6 @@ module.exports = {
     "<rootDir>/apps/workkit-fe",
     "<rootDir>/apps/workkit-be",
     "<rootDir>/libs/page-login",
+    "<rootDir>/libs/select-language",
   ],
 };

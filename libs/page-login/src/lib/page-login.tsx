@@ -14,6 +14,7 @@ import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
+import { SelectLanguage } from '@workkit/select-language';
 
 function Copyright() {
 	return (
@@ -61,24 +62,6 @@ const useStyles = makeStyles((theme) => ({
 		width: '100%',
 	},
 }));
-
-function SelectLanguage() {
-	const { i18n } = useTranslation();
-
-	const changeLanguage = lng => {
-		i18n.changeLanguage(lng);
-	};
-
-	return (
-		<div>
-			<Button onClick={() => changeLanguage('en')}>EN</Button>
-			<Button onClick={() => changeLanguage('ca')}>CA</Button>
-			<Button onClick={() => changeLanguage('es')}>ES</Button>
-			<Button onClick={() => changeLanguage('eu')}>EU</Button>
-			<Button onClick={() => changeLanguage('ga')}>GA</Button>
-		</div>
-	)
-}
 
 export const PageLogin = (): React.ReactElement => {
 	const classes = useStyles();
