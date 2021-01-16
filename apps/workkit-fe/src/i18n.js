@@ -13,8 +13,8 @@ i18n
   .use(LanguageDetector)
   .init({
     debug: true,
-    lng: "en",
-    fallbackLng: "en",
+    lng: "es",
+    fallbackLng: "es",
     keySeparator: false,
     interpolation: {
       escapeValue: false // react already safes from xss
