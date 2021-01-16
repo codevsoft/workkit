@@ -13,6 +13,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { Container } from '@material-ui/core';
 
 function Copyright() {
 	return (
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		height: '100vh',
 		justifyContent: 'center',
-		backgroundImage: 'url(https://source.unsplash.com/collection/3694365)',
+		backgroundImage: 'url(/assets/gradient2k.jpg)',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
 	},
@@ -57,7 +58,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	logo: {
 		textAlign: 'center',
-		width: '100%',
 	},
 }));
 
@@ -67,15 +67,18 @@ export const PageLogin = (): React.ReactElement => {
 	return (
 		<Grid container component="main" className={classes.root}>
 			<CssBaseline />
-			<Grid item component={Paper} elevation={6} square xs={10} md={4}>
+			<Grid
+				item
+				component={Paper}
+				elevation={6}
+				square
+				xs={11}
+				md={'auto'}
+			>
 				<div className={classes.paper}>
-					<div className={classes.logo}>
-						<img
-							src="./assets/workkit.svg"
-							alt="workkit"
-							width="100%"
-						/>
-					</div>
+					<Container className={classes.logo}>
+						<img src="./assets/workkit.svg" alt="workkit" />
+					</Container>
 					<Avatar className={classes.avatar}>
 						<LockOutlinedIcon />
 					</Avatar>
@@ -141,3 +144,5 @@ export const PageLogin = (): React.ReactElement => {
 		</Grid>
 	);
 };
+
+export default PageLogin;
