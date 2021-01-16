@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const PasswordRecovery = (): React.ReactElement => {
-	return <></>;
+	return <div></div>;
 };
 
 export default PasswordRecovery;
