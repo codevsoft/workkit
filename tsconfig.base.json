@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@workkit/page-login": ["libs/page-login/src/index.ts"]
+      "@workkit/page-login": ["libs/page-login/src/index.ts"],
+      "@workkit/select-language": ["libs/select-language/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

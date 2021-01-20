@@ -13,7 +13,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
+import { useTranslation } from 'react-i18next';
+import { SelectLanguage } from '@workkit/select-language';
 
 function Copyright() {
 	return (
@@ -63,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const PageLogin = (): React.ReactElement => {
 	const classes = useStyles();
+	const { t } = useTranslation();
 
 	return (
 		<Grid container component="main" className={classes.root}>
@@ -76,14 +78,19 @@ export const PageLogin = (): React.ReactElement => {
 				md={'auto'}
 			>
 				<div className={classes.paper}>
-					<Container className={classes.logo}>
-						<img src="./assets/workkit.svg" alt="workkit" />
-					</Container>
+					<SelectLanguage />
+					<div className={classes.logo}>
+						<img
+							src="./assets/workkit.svg"
+							alt="workkit"
+							width="100%"
+						/>
+					</div>
 					<Avatar className={classes.avatar}>
 						<LockOutlinedIcon />
 					</Avatar>
 					<Typography component="h1" variant="h5">
-						Acceso a la plataforma
+						{t('title')}
 					</Typography>
 					<form className={classes.form} noValidate>
 						<TextField
@@ -92,7 +99,7 @@ export const PageLogin = (): React.ReactElement => {
 							required
 							fullWidth
 							id="user"
-							label="Usuario"
+							label={t('user')}
 							name="user"
 							autoComplete="false"
 							autoFocus
@@ -103,7 +110,7 @@ export const PageLogin = (): React.ReactElement => {
 							required
 							fullWidth
 							name="password"
-							label="Contraseña"
+							label={t('password')}
 							type="password"
 							id="password"
 							autoComplete="false"
@@ -112,7 +119,7 @@ export const PageLogin = (): React.ReactElement => {
 							control={
 								<Checkbox value="remember" color="primary" />
 							}
-							label="Recordar"
+							label={t('remember')}
 						/>
 						<Button
 							type="submit"
@@ -121,17 +128,17 @@ export const PageLogin = (): React.ReactElement => {
 							color="primary"
 							className={classes.submit}
 						>
-							<KeyboardArrowRightIcon /> Enviar
+							<KeyboardArrowRightIcon /> {t('send')}
 						</Button>
 						<Grid container>
 							<Grid item xs>
 								<Link href="#" variant="body2">
-									Recuperar contraseña
+									{t('recovery')}
 								</Link>
 							</Grid>
 							<Grid item>
 								<Link href="#" variant="body2">
-									Registrarse
+									{t('register')}
 								</Link>
 							</Grid>
 						</Grid>

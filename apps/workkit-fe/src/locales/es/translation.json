@@ -1,0 +1,9 @@
+{
+  "title": "Acceso a la plataforma",
+  "user": "Usuario",
+  "password": "Contraseña",
+  "remember": "Recordar",
+  "send": "Enviar",
+  "recovery": "Recuperar contraseña",
+  "register": "Registrarse"
+}
