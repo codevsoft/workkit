@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		height: '100vh',
 		justifyContent: 'center',
-		backgroundImage: 'url(https://source.unsplash.com/collection/3694365)',
+		backgroundImage: 'url(/assets/gradient2k.jpg)',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
 	},
@@ -59,7 +59,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	logo: {
 		textAlign: 'center',
-		width: '100%',
 	},
 }));
 
@@ -70,7 +69,14 @@ export const PageLogin = (): React.ReactElement => {
 	return (
 		<Grid container component="main" className={classes.root}>
 			<CssBaseline />
-			<Grid item component={Paper} elevation={6} square xs={10} md={4}>
+			<Grid
+				item
+				component={Paper}
+				elevation={6}
+				square
+				xs={11}
+				md={'auto'}
+			>
 				<div className={classes.paper}>
 					<SelectLanguage />
 					<div className={classes.logo}>
@@ -145,3 +151,5 @@ export const PageLogin = (): React.ReactElement => {
 		</Grid>
 	);
 };
+
+export default PageLogin;

@@ -20,13 +20,39 @@
 yarn install
 ```
 
+## Config enviroments
+
+In `.env-cmdrc` you can set up the enviroment variables.
+
+Enviroments:
+
+-   `fe` for frontend developers in Atlas DB.
+-   `be` for backend developers in local.
+-   `pro` for finally production use.
+
+Variables:
+
+-   `NX_DB_URL` for DB URL.
+-   `NX_DB_USER` for DB user.
+-   `NX_DB_PASSWORD` for DB user password.
+
 ## Usage
 
 ```sh
-npx nx serve workkit-fe
+// Workkit-FE with Frontend Env.
+npm run start-fe workkit-fe
+// Workkit-FE with Backend Env.
+npm run start-be workkit-fe
+// Workkit-FE with Production Env.
+npm run start-pro workkit-fe
 
 // in another terminal
-npx nx serve workkit-be
+// Workkit-BE with Frontend Env.
+npm run start-fe workkit-be
+// Workkit-BE with Backend Env.
+npm run start-be workkit-be
+// Workkit-BE with Production Env.
+npm run start-pro workkit-be
 ```
 
 ## Run tests
@@ -39,7 +65,7 @@ npx nx affected:test
 
 👤 **codevsoft**
 
-- Github: [@codevsoft](https://github.com/codevsoft)
+-   Github: [@codevsoft](https://github.com/codevsoft)
 
 ## 🤝 Contributing
 
