@@ -9,7 +9,7 @@ services:
     volumes:
       - ./:/app
       - /app/node_modules
-    entrypoint: ["npx", "nx", "serve", "--host=0.0.0.0", "workkit-fe"]
+    entrypoint: ["npm", "run", "start-fe", "--host=0.0.0.0", "workkit-fe"]
     ports:
       - "4200:4200"
 
@@ -22,8 +22,8 @@ services:
     volumes:
       - ./:/app
       - /app/node_modules
-    entrypoint: ["npx", "nx", "serve", "--host=0.0.0.0", "workkit-be"]
-
+    entrypoint: ["npm", "run", "start-be", "--host=0.0.0.0", "workkit-be"]
+    
   mongo:
     image: mongo
     command: [--auth]
