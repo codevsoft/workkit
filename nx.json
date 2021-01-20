@@ -38,6 +38,9 @@
     },
     "page-login": {
       "tags": []
+    },
+    "select-language": {
+      "tags": []
     }
   }
 }

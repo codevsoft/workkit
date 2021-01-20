@@ -23,3 +23,9 @@ services:
       - ./:/app
       - /app/node_modules
     entrypoint: ["npm", "run", "start-be", "--host=0.0.0.0", "workkit-be"]
+    
+  mongo:
+    image: mongo
+    command: [--auth]
+    volumes:
+      - ./.mongo/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh:ro
