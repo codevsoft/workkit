@@ -5,6 +5,7 @@
 
 import * as express from 'express';
 import { addTodoRoutes } from './app/test';
+import * as Mongoose from 'mongoose';
 
 const app = express();
 
@@ -19,3 +20,14 @@ const server = app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}/api`);
 });
 server.on('error', console.error);
+
+Mongoose.connect(
+  process.env.CONNECTION_STRING,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  (err) => {
+    if (err) {
+      console.log("Database Error----------------", err);
+    }
+    console.log("Connected to database");
+  }
+);
